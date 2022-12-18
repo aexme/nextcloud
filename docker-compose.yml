@@ -23,8 +23,8 @@ services:
     restart: always
     networks:
       - cloudnet
-    # ports:
-    #  - 8080:80
+    ports:
+      - 8080:80
     volumes:
       - ./nextcloud-docroot:/var/www/html
     environment:
