@@ -12,8 +12,3 @@ services:
       - ./nextcloud-docroot:/var/www/html
     env_file:
         - .env
-
-networks:
-  cloudnet:
-    name: cloudnet
-    driver: bridge
