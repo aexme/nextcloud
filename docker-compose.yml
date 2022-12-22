@@ -1,21 +1,6 @@
 version: '3'
 
-# volumes:
-#   nextcloud:
-#   db:
-
 services:
-  nextcloud_db:
-    image: mariadb
-    restart: always
-    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
-    networks:
-      - cloudnet
-    volumes:
-      - ./nextcloud-db:/var/lib/mysql
-    env_file:
-        - .env
-
   nextcloud:
     image: nextcloud:24-apache
     restart: always
