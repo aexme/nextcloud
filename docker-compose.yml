@@ -1,10 +1,12 @@
-version: '3'
-
 services:
   nextcloud:
     image: nextcloud:24-apache
     restart: always
+    networks:
+      - coolify
     ports:
       - 8080:80
     volumes:
       - ./nextcloud-docroot:/var/www/html
+    env_file:
+        - .env
