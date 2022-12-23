@@ -8,5 +8,3 @@ services:
       - 8080:80
     volumes:
       - ./nextcloud-docroot:/var/www/html
-    env_file:
-        - .env
